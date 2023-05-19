@@ -4,7 +4,7 @@ import { FcGoogle} from "react-icons/fc";
 import { AuthContext } from '../../Providers/AuthProvider';
 
 const Register = () => {
-    const {createUser}=useContext(AuthContext)
+    const {createUser, updateUserProfileFunc }=useContext(AuthContext)
 
     const handelSignup = event =>{
         event.preventDefault();
@@ -20,6 +20,14 @@ const Register = () => {
         .then(result=>{
             const user =result.user;
             console.log(user);
+
+            updateUserProfileFunc(user, name, photo)
+            .then(() => {
+                // console.log('successfully user update');
+            })
+            .catch(e => {
+                console.log(e.message)
+            })
         })
         .catch(error=>{
             console.log(error);

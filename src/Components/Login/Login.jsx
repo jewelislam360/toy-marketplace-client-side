@@ -8,7 +8,7 @@ import Swal from 'sweetalert2';
 
 const Login = () => {
     
-    const {signIn}=useContext(AuthContext);
+    const {signIn, googleSignin}=useContext(AuthContext);
 
     const handelLogin = event =>{
         event.preventDefault();
@@ -22,6 +22,7 @@ const Login = () => {
         .then(result=>{
             const user = result.user;
             console.log(user);
+            form.reset();
             Swal.fire({
                 position: 'center',
                 icon: 'success',
@@ -35,6 +36,20 @@ const Login = () => {
         })
 
         
+    }
+
+    const hendelGoogleSinIn=()=>{
+        googleSignin()
+        .then(result=>{
+            const user= result.user;
+        console.log(user);
+
+
+        })
+        .catch(error=>{
+            console.log(error);
+        })
+
     }
 
 
@@ -73,7 +88,8 @@ const Login = () => {
                             </form>
                             <div><h2>Don't have an account? <Link to='/register'>Sign Up hare.</Link></h2></div>
 
-                            <div className='text-4xl mx-auto'><FcGoogle></FcGoogle></div>
+                            <button className='text-4xl mx-auto' onClick={hendelGoogleSinIn}><FcGoogle></FcGoogle></button>
+
                         </div>
 
                     </div>

@@ -4,6 +4,7 @@ import Home from "../Components/Home/Home";
 import ErrorPage from "../Components/ErrorPage/ErrorPage";
 import Login from "../Components/Login/Login";
 import Register from "../Components/Register/Register";
+import AddAToy from "../Components/AddAToy/AddAToy";
 
 const router = createBrowserRouter([
     {
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
         {
           path:'/register',
             element:<Register></Register>
+
+        },
+        {
+          path:'/addatoy',
+            element:<AddAToy></AddAToy>
 
         }
       ]
