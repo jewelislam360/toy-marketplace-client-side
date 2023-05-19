@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { FcGoogle} from "react-icons/fc";
+import { AuthContext } from '../../Providers/AuthProvider';
 
 const Register = () => {
+    const {createUser}=useContext(AuthContext)
 
     const handelSignup = event =>{
         event.preventDefault();
@@ -13,6 +15,15 @@ const Register = () => {
         const photo =form.photo.value;
         const user ={email, password};
         console.log(user);
+
+        createUser(email, password)
+        .then(result=>{
+            const user =result.user;
+            console.log(user);
+        })
+        .catch(error=>{
+            console.log(error);
+        })
     }
 
     

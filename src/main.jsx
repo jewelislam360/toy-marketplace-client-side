@@ -5,15 +5,20 @@ import './index.css'
 import {
   RouterProvider,
 } from "react-router-dom";
+
 import router from './Routes/Routes';
-import AuthProvidr from './Providers/AuthProvidr';
+import AuthProvider from './Providers/AuthProvider';
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <div className='w-[75%]	mx-auto'>
     <React.StrictMode>
-     <AuthProvidr>
-      <RouterProvider router={router} />
-      </AuthProvidr>
-  </React.StrictMode>,
+      
+        <AuthProvider>
+        <RouterProvider router={router} />
+        </AuthProvider>
+      
+
+    </React.StrictMode>,
   </div>
 )

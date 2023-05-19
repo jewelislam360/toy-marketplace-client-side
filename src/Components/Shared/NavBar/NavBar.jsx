@@ -1,14 +1,41 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../Providers/AuthProvider';
+
 
 const NavBar = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+
+    const handelLogout = () => {
+
+        logOut()
+            .then(() => {
+
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+
+    }
+
+    const activeLink = ({ isActive }) => {
+        return {
+            fontWeight: isActive ? 'bold' : 'normal',
+            color: isActive ? 'green' : 'none',
+        }
+    }
+
+
+
+
     const navItam = <>
-    <li><Link>Home</Link></li>
-    <li><Link>All Toys</Link></li>
-    <li><Link>My Toys</Link></li>
-    <li><Link>Add a toy</Link></li>
-    <li><Link>BlogS</Link></li>
-    
+        <li><Link to='/'>Home</Link></li>
+        <li><Link to=''>All Toys</Link></li>
+        <li><Link to=''>My Toys</Link></li>
+        <li><Link to=''>Add a toy</Link></li>
+        <li><Link to='/blog' >BlogS</Link></li>
+
     </>
     return (
         <div>
@@ -20,7 +47,7 @@ const NavBar = () => {
                         </label>
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             {navItam}
-                            
+
                         </ul>
                     </div>
                     <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
@@ -28,11 +55,34 @@ const NavBar = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         {navItam}
-                        
+
                     </ul>
                 </div>
-                <div className="navbar-end">
-                <Link>Login</Link>
+                <div className='navbar-end'>
+                    {
+                        user ?
+
+                            <div className="flex align-middle">
+                                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                    <div className="w-10 rounded-full">
+                                        <img src={`${user.photoURL}`} />
+                                    </div>
+                                    </label>
+                                    <div>
+                                        <Link onClick={handelLogout}>Logout</Link>
+                                    </div>
+                                
+
+                            </div>
+
+                            :
+
+                            <div>
+                                <Link to="/login">Login</Link>
+                            </div>
+
+
+                    }
                 </div>
             </div>
 
