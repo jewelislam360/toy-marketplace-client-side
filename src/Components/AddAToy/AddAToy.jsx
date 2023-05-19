@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../../Providers/AuthProvider';
 
 const AddAToy = () => {
+    const { user } = useContext(AuthContext);
+    console.log(user);
     return (
         <div>
             <form >
@@ -27,13 +30,13 @@ const AddAToy = () => {
                         <label className="label">
                             <span className="label-text">Seller Name</span>
                         </label>
-                        <input type="text" placeholder="Seller Name" className="input input-bordered input-secondary w-[100%]" />
+                        <input type="text" defaultValue={`${user?.displayName}`}  placeholder={`${user?.displayName}`} className="input input-bordered input-secondary w-[100%]" />
                     </div>
                     <div className="form-control w-[50%]">
                         <label className="label">
                             <span className="label-text">Seller email</span>
                         </label>
-                        <input type="email" placeholder="Seller email" className="input input-bordered input-secondary w-[100%]" />
+                        <input type="email" defaultValue={`${user?.email}`} placeholder={`${user?.email}`} className="input input-bordered input-secondary w-[100%]" />
                     </div>
                 </div>
                 <div className="form-control w-[50%]">
@@ -73,7 +76,7 @@ const AddAToy = () => {
                     <input type="area" placeholder="description" className="input input-bordered input-secondary w-[100%]" />
                 </div>
 
-                <button className="btn btn-secondary w-[100%]">Button</button>
+                <button className="btn btn-secondary w-[100%] mb-10">Button</button>
 
             </form>
         </div>
