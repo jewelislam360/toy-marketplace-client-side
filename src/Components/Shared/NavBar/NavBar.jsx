@@ -31,7 +31,7 @@ const NavBar = () => {
 
     const navItam = <>
         <li><Link to='/'>Home</Link></li>
-        <li><Link to=''>All Toys</Link></li>
+        <li><Link to='/alltoys'>All Toys</Link></li>
         <li><Link to=''>My Toys</Link></li>
         <li><Link to='/addatoy'>Add a toy</Link></li>
         <li><Link to='/blog' >BlogS</Link></li>
