@@ -34,7 +34,7 @@ const AddAToy = () => {
         .then(res => res.json())
         .then(data =>{
             console.log(data);
-            if (data.insertedId>0){
+            if (data.insertedId > 0){
                 Swal.fire({
                     title: 'Success!',
                     text: 'Successfully added a Toy Car',
@@ -42,6 +42,7 @@ const AddAToy = () => {
                     confirmButtonText: 'Cool'
                 })
             }
+            form.reset();
 
             
         })

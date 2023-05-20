@@ -33,7 +33,7 @@ const AllToys = () => {
                             <th>Category</th>
                             <th>Price</th>
                             <th>Quantity</th>
-                            <th>Vew</th>
+                            <th>Details</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -57,7 +57,7 @@ const AllToys = () => {
                             <td>${toy.price}</td>
                             <td>{toy.quantity}</td>
                             <th>
-                                <button className="btn btn-ghost btn-xs">details</button>
+                                <button className="btn btn-secondary btn-xs">details</button>
                             </th>
                         </tr>
                         ))}
