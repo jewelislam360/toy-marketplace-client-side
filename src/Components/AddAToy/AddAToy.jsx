@@ -32,9 +32,9 @@ const AddAToy = () => {
             body:JSON.stringify(data)
         })
         .then(res => res.json())
-        .then(result =>{
-            console.log(result);
-            if (result.insertedId>0){
+        .then(data =>{
+            console.log(data);
+            if (data.insertedId>0){
                 Swal.fire({
                     title: 'Success!',
                     text: 'Successfully added a Toy Car',
