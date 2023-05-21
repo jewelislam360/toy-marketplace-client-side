@@ -6,7 +6,7 @@ import 'react-tabs/style/react-tabs.css';
 const CategoryTabs = () => {
     const [toy, setToy]= useState();
     
-    const [tabIndex, setTabIndex] = useState(0);
+    const [tabIndex, setTabIndex] = useState();
 
     useEffect(()=>{
         fetch(`http://localhost:5000/categoryToys/${tabIndex}`)

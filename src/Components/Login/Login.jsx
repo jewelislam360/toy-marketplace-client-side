@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FcGoogle} from "react-icons/fc";
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
@@ -7,8 +7,15 @@ import Swal from 'sweetalert2';
 
 
 const Login = () => {
+
     
     const {signIn, googleSignin}=useContext(AuthContext);
+
+    const navigate =useNavigate();
+    const location =useLocation();
+
+    const from =location.state?.from?.pathname || '/';
+    
 
     const handelLogin = event =>{
         event.preventDefault();
@@ -23,6 +30,7 @@ const Login = () => {
             const user = result.user;
             console.log(user);
             form.reset();
+
             Swal.fire({
                 position: 'center',
                 icon: 'success',
@@ -30,6 +38,9 @@ const Login = () => {
                 showConfirmButton: false,
                 timer: 1500
               })
+              navigate(from);
+
+
         })
         .catch((error)=>{
             console.log(error);
@@ -43,6 +54,15 @@ const Login = () => {
         .then(result=>{
             const user= result.user;
         console.log(user);
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'successfully Logedin',
+            showConfirmButton: false,
+            timer: 1500
+          })
+          navigate(from);
+
 
 
         })
@@ -51,6 +71,8 @@ const Login = () => {
         })
 
     }
+
+   
 
 
     return (
