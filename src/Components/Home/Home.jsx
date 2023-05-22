@@ -4,13 +4,12 @@ import CategoryTabs from '../CategoryTabs/CategoryTabs';
 import OusGallery from '../OurGallery/OusGallery';
 import AboutUs from '../AboutUs/AboutUs';
 import OurAdvantage from '../OurAdvantage/OurAdvantage';
-import TruckCategory from '../CategoryTabs/TruckCategory';
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <TruckCategory></TruckCategory>
+            
             <AboutUs></AboutUs>
             <OurAdvantage></OurAdvantage>
             <OusGallery></OusGallery>

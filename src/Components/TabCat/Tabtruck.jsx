@@ -4,7 +4,7 @@ const Tabtruck = () => {
 
     const [trucks, setTrucks] = useState();
         useEffect(() => {
-            fetch('http://localhost:5000/categoryToys/truck')
+            fetch('https://b7a11-toy-marketplace-server-side-jewelislam360.vercel.app/categoryToys/truck')
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);

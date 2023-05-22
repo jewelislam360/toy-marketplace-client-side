@@ -55,12 +55,12 @@ const router = createBrowserRouter([
         {
           path: '/updetetoys/:id',
           element: <UpdeteToys></UpdeteToys>,
-          loader: ({params})=>fetch(`http://localhost:5000/allToys/${params.id}`)
+          loader: ({params})=>fetch(`https://b7a11-toy-marketplace-server-side-jewelislam360.vercel.app/allToys/${params.id}`)
         },
         {
           path: '/ToyDetails/:id',
           element: <ToyDetails></ToyDetails>,
-          loader: ({params})=>fetch(`http://localhost:5000/allToys/${params.id}`)
+          loader: ({params})=>fetch(`https://b7a11-toy-marketplace-server-side-jewelislam360.vercel.app/allToys/${params.id}`)
         }
       ]
     },

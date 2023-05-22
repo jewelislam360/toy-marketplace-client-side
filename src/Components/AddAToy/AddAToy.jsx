@@ -24,7 +24,7 @@ const AddAToy = () => {
         const data = { toyName, photo, sellerName, email, rating, quantity, category, price, description }
         console.log(data);
 
-        fetch('http://localhost:5000/addToy', {
+        fetch('https://b7a11-toy-marketplace-server-side-jewelislam360.vercel.app/addToy', {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -42,8 +42,6 @@ const AddAToy = () => {
                         confirmButtonText: 'Cool'
                     })
                 }
-                // form.reset();
-
 
             })
 
