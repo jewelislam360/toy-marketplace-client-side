@@ -3,18 +3,16 @@ import { FaRegStar, FaStar } from "react-icons/fa";
 import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
 
-const Tabtruck = () => {
-
-    const [trucks, setTrucks] = useState();
+const FireTruck = () => {
+    const [trucks, setFiretrucks] = useState();
         useEffect(() => {
-            fetch('https://b7a11-toy-marketplace-server-side-jewelislam360.vercel.app/categoryToys/truck')
+            fetch('https://b7a11-toy-marketplace-server-side-jewelislam360.vercel.app/categoryToys/mini fire truck')
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
-                    setTrucks(data)
+                    setFiretrucks(data)
                 })
         }, [])
-
     return (
         <div className='md:flex gap-4'>
             {
@@ -56,4 +54,4 @@ const Tabtruck = () => {
     );
 };
 
-export default Tabtruck;
+export default FireTruck;

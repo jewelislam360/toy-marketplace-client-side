@@ -45,10 +45,10 @@ const OusGallery = () => {
                 <div data-aos="fade-down-right" className='h-[300px] w-[300px]'><img className='h-[300px] w-[500px]' src={img2} alt="" /></div>
                 <div data-aos="fade-down-left" className='h-[300px] w-[300px]'><img className='h-[300px] w-[500px]' src={img3} alt="" /></div>
                 <div data-aos="fade-down-left" className='h-[300px] w-[300px]'><img className='h-[300px] w-[500px]' src={img4} alt="" /></div>
-                <div data-aos="fade-down-right" className='h-[300px] w-[300px]'><img className='h-[300px] w-[500px]' src={img5} alt="" /></div>
-                <div data-aos="fade-down-right" className='h-[300px] w-[300px]'><img className='h-[300px] w-[500px]' src={img6} alt="" /></div>
-                <div data-aos="fade-down-left" className='h-[300px] w-[300px]'><img className='h-[300px] w-[500px]' src={img7} alt="" /></div>
-                <div data-aos="fade-down-left" className='h-[300px] w-[300px]'><img className='h-[300px] w-[500px]' src={img9} alt="" /></div>
+                <div data-aos="fade-up-right" className='h-[300px] w-[300px]'><img className='h-[300px] w-[500px]' src={img5} alt="" /></div>
+                <div data-aos="fade-up-right" className='h-[300px] w-[300px]'><img className='h-[300px] w-[500px]' src={img6} alt="" /></div>
+                <div data-aos="fade-up-left" className='h-[300px] w-[300px]'><img className='h-[300px] w-[500px]' src={img7} alt="" /></div>
+                <div data-aos="fade-up-left" className='h-[300px] w-[300px]'><img className='h-[300px] w-[500px]' src={img9} alt="" /></div>
 
             </div>
 

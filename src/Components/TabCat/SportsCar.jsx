@@ -3,31 +3,29 @@ import { FaRegStar, FaStar } from "react-icons/fa";
 import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
 
-const Tabtruck = () => {
-
-    const [trucks, setTrucks] = useState();
+const SportsCar = () => {
+    const [fires, setFires] = useState();
         useEffect(() => {
-            fetch('https://b7a11-toy-marketplace-server-side-jewelislam360.vercel.app/categoryToys/truck')
+            fetch('https://b7a11-toy-marketplace-server-side-jewelislam360.vercel.app/categoryToys/sports car')
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
-                    setTrucks(data)
+                    setFires(data)
                 })
         }, [])
-
     return (
         <div className='md:flex gap-4'>
             {
-                trucks?.slice(0,3).map(truck => {
+                fires?.slice(0,3).map(fire => {
                    return <div>
                         <div className="card w-96 bg-base-100 shadow-xl">
-                            <figure><img src={truck.photo}alt="Shoes" /></figure>
+                            <figure><img src={fire.photo}alt="Shoes" /></figure>
                             <div className="card-body">
-                            <h2 className="card-title"><span className="text-secondary">Toy Name: </span> {truck.toyName}</h2>
-                            <p><span className="text-secondary font-bold" >Price: </span> ${truck.price}</p>
+                            <h2 className="card-title"><span className="text-secondary">Toy Name: </span> {fire.toyName}</h2>
+                            <p><span className="text-secondary font-bold" >Price: </span> ${fire.price}</p>
                             <p>
                         <Rating
-                            placeholderRating={truck.rating}
+                            placeholderRating={fire.rating}
                             readonly
                             emptySymbol={<FaRegStar></FaRegStar>}
                             placeholderSymbol={<FaStar className='text-warning'></FaStar>}
@@ -38,10 +36,10 @@ const Tabtruck = () => {
 
                         </Rating>
 
-                        {truck.rating}
+                        {fire.rating}
                     </p>
                                 <div className="card-actions justify-end">
-                                    <Link to={`/ToyDetails/${truck._id}`}><button className="btn btn-Secondary">view Details</button></Link>
+                                    <Link to={`/ToyDetails/${fire._id}`}><button className="btn btn-Secondary">view Details</button></Link>
                                     
                                 </div>
                             </div>
@@ -56,4 +54,4 @@ const Tabtruck = () => {
     );
 };
 
-export default Tabtruck;
+export default SportsCar;

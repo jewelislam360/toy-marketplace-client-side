@@ -3,20 +3,17 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
 import Tabtruck from '../TabCat/Tabtruck';
+import SportsCar from '../TabCat/SportsCar';
+import FireTruck from '../TabCat/FireTruck';
+import PoliceCar from '../TabCat/PoliceCar';
+import RegularCar from '../TabCat/RegularCar';
 
 const CategoryTabs = () => {
-    // const [toy, setToy]= useState();
+    
     
     const [tabIndex, setTabIndex] = useState();
 
-    // useEffect(()=>{
-    //     fetch('https://b7a11-toy-marketplace-server-side-jewelislam360.vercel.app/categoryToys/truck')
-    //     .then(res => res.json())
-    //     .then(data =>{
-    //         console.log(data);
-    //         setToy(data)
-    //     })
-    // },[])
+    
 
    
 
@@ -25,21 +22,18 @@ const CategoryTabs = () => {
         <div>
         <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
       <TabList>
-        <Tab>sports car</Tab>
-        <Tab>truck</Tab>
-        <Tab>regular car</Tab>
-        <Tab>fire truck</Tab>
-        <Tab>police car</Tab>
+        <Tab>Sports car</Tab>
+        <Tab>Truck</Tab>
+        <Tab>Regular car</Tab>
+        <Tab>Fire truck</Tab>
+        <Tab>Police car</Tab>
       </TabList>
 
-      <TabPanel>jewel</TabPanel>
-      <TabPanel>
-       <Tabtruck></Tabtruck>
-        
-      </TabPanel>
-      <TabPanel>jewel</TabPanel>
-      <TabPanel>jewel</TabPanel>
-      <TabPanel>jewel</TabPanel>
+      <TabPanel><SportsCar></SportsCar></TabPanel>
+      <TabPanel><Tabtruck></Tabtruck></TabPanel>
+      <TabPanel><RegularCar></RegularCar></TabPanel>
+      <TabPanel><FireTruck></FireTruck></TabPanel>
+      <TabPanel><PoliceCar></PoliceCar></TabPanel>
     </Tabs>
             
         </div>
