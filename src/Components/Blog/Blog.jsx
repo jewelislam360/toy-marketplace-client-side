@@ -4,26 +4,34 @@ const Blog = () => {
     return (
         <div className='mx-auto'>
             <div className='border rounded-xl shadow-md my-8 p-5'>
-                <h1 className='font-bold text-xl my-8'>1. Tell us the differences between uncontrolled and controlled components.</h1>
-                <p>In controlled components, the parent component is responsible for managing the state and passing it down as props to the controlled component. This makes it easy to track the state of the component and predict how it will behave. However, in larger projects with many levels of nested components, this can make the code more complex and harder to manage.<br></br>
+                <h1 className='font-bold text-xl my-8'>1. What is an access token and refresh token? How do they work and where should we store them on the client-side?</h1>
+                <p>When a user logins in, the authorization server issues an access token, which is an artifact that client applications can use to make secure calls to an API server. When a client application needs to access protected resources on a server on behalf of a user, the access token lets the client signal to the server that it has received authorization by the user to perform certain tasks or access certain resources.
 
-                    On the other hand, uncontrolled components manage their own state using a ref to access the DOM element's current value and update the state accordingly. This makes them simpler to implement, but they can be more difficult to track and manage in larger projects.</p>
+                    OAuth 2.0 doesn't define a format for access tokens. At Auth0, for example, access tokens issued for the Management API and access tokens issued for any custom API that you have registered with Auth0 follow the JSON Web Token (JWT) standard. Their basic structure conforms to the typical JWT structure, and they contain standard JWT claims asserted about the token itself.<br></br>
+
+                    The client application can get a new access token as long as the refresh token is valid and unexpired. Consequently, a refresh token that has a very long lifespan could theoretically give infinite power to the token bearer to get a new access token to access protected resources anytime. The bearer of the refresh token could be a legitimate user or a malicious user. As such, security companies, such as Auth0, create mechanisms to ensure that this powerful token is mainly held and used continuously by the intended parties.</p>
             </div>
             <div className='border rounded-xl shadow-md my-8 p-5'>
-                <h1 className='font-bold text-xl my-8'>2. How to validate React props using PropTypes.</h1>
-                <p>Props and PropTypes are important mechanisms for passing read-only attributes between React components.
-
-                    We can use React props, short for properties, to send data from one component to another. If a component receives the wrong type of props, it can cause bugs and unexpected errors in your app.</p>
-                <p>When developing a React application, you’ll need to structure and define your props to avoid bugs and errors. Just like a function might have mandatory arguments, a React component might require a prop to be defined, otherwise, it will not render properly. Forgetting to pass a required prop into a component that needs it could cause your app to behave unexpectedly.</p>
+                <h1 className='font-bold text-xl my-8'>2. Compare SQL and NoSQL databases?</h1>
+                <p>SQL is a domain-specific language used to query and manage data. It works by allowing users to query, insert, delete, and update records in relational databases. SQL also allows for complex logic to be applied through the use of transactions and embedded procedures such as stored functions or views.</p>
+                <p>NoSQL stands for Not only SQL. It is a type of database that uses non-relational data structures, such as documents, graph databases, and key-value stores to store and retrieve data. NoSQL systems are designed to be more flexible than traditional relational databases and can scale up or down easily to accommodate changes in usage or load. This makes them ideal for use in applications</p>
             </div >
             <div className='border rounded-xl shadow-md my-8 p-5'>
-                <h1 className='font-bold text-xl my-8'>3. Tell us the difference between nodejs and express js.</h1>
-                <p>To know the difference between ExpressJS vs NodeJS, we must first analyze each separately. NodeJS is open-source, cross-platform JavaScript code that runs on servers. It uses an asynchronous event-driven model and is designed to build scalable network applications. It’s built on Google Chrome’s V8 engine, which makes it fast and efficient to develop apps.</p>
-                <p>ExpressJS is a web application framework for NodeJS. That’s what mainly makes the difference between Express JS and Node JS. The former provides various features that make web application development fast and easy, which otherwise takes more time using only the latter. It provides a robust set of features for web and mobile applications.</p>
+                <h1 className='font-bold text-xl my-8'>3. What is express js? What is Nest JS?</h1>
+                <p>Express is a minimal and flexible Node.js framework that provides a robust set of features for building web and mobile applications. It is a lightweight and unopinionated framework that allows developers to create applications with their preferred tools and libraries. Express is popular among developers due to its simplicity and ease of use.</p>
+                <p>NestJS is a progressive Node.js framework for building efficient, scalable, and reliable server-side applications. It is built on top of Express.js and provides a more structured way of building applications with TypeScript. NestJS uses a modular architecture, making it easy to maintain and scale applications as they grow.</p>
             </div>
             <div className='border rounded-xl shadow-md my-8 p-5'>
-                <h1 className='font-bold text-xl my-8'>4. What is a custom hook, and why will you create a custom hook?</h1>
-                <p>Custom React JS hooks offer reusability as when a custom hook is created, it can be reused easily, which makes the code cleaner and reduces the time to write the code. It also enhances the rendering speed of the code as a custom hook does not need to be rendered again and again while rendering the whole code.</p>
+                <h1 className='font-bold text-xl my-8'>4. What is MongoDB aggregate and how does it work?</h1>
+                <p>Aggregation is a way of processing a large number of documents in a collection by means of passing them through different stages. The stages make up what is known as a pipeline. The stages in a pipeline can filter, sort, group, reshape and modify documents that pass through the pipeline.
+
+                    One of the most common use cases of Aggregation is to calculate aggregate values for groups of documents. This is similar to the basic aggregation available in SQL with the GROUP BY clause and COUNT, SUM and AVG functions. MongoDB Aggregation goes further though and can also perform relational-like joins, reshape documents, create new and update existing collections, and so on.
+
+                    While there are other methods of obtaining aggregate data in MongoDB, the aggregation framework is the recommended approach for most work.
+
+                    There are what are called single purpose methods like estimatedDocumentCount(),  count(), and distinct() which are appended to a find() query making them quick to use but limited in scope.
+
+                    The map-reduce framework on MongoDB is a predecessor of the aggregation framework and much more complex to use. MongoDB have deprecated.</p>
             </div>
         </div>
     );
