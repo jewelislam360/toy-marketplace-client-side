@@ -51,7 +51,7 @@ const AllToys = () => {
                     <tbody>
                         {/* row 1 */}
 
-                        {toys?.map((toy) => (
+                        {toys?.slice(0,20).map((toy) => (
 
                             <tr toy={toy}>
 

@@ -42,7 +42,7 @@ const AddAToy = () => {
                         confirmButtonText: 'Cool'
                     })
                 }
-                form.reset();
+                // form.reset();
 
 
             })
