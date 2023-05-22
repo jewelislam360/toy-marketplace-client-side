@@ -59,7 +59,7 @@ const router = createBrowserRouter([
         },
         {
           path: '/ToyDetails/:id',
-          element: <ToyDetails></ToyDetails>,
+          element: <PrivetRouts><ToyDetails></ToyDetails></PrivetRouts>,
           loader: ({params})=>fetch(`https://b7a11-toy-marketplace-server-side-jewelislam360.vercel.app/allToys/${params.id}`)
         }
       ]

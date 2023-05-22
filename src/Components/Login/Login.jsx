@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FcGoogle} from "react-icons/fc";
 import { useContext } from 'react';
@@ -7,9 +7,11 @@ import Swal from 'sweetalert2';
 
 
 const Login = () => {
+    const [error, setError]=useState();
 
     
     const {signIn, googleSignin}=useContext(AuthContext);
+    
 
     const navigate =useNavigate();
     const location =useLocation();
@@ -18,6 +20,7 @@ const Login = () => {
     
 
     const handelLogin = event =>{
+        
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
@@ -30,6 +33,8 @@ const Login = () => {
             const user = result.user;
             console.log(user);
             form.reset();
+            setError('')
+            
 
             Swal.fire({
                 position: 'center',
@@ -43,7 +48,10 @@ const Login = () => {
 
         })
         .catch((error)=>{
-            console.log(error);
+            console.log(error.message);
+           setError(error.message);
+           form.reset();
+           
         })
 
         
@@ -102,7 +110,9 @@ const Login = () => {
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
                             </div>
+                            <p className='text-warning'>{error}</p>
                             <div className="form-control mt-6">
+                                
                                 <button className="btn btn-primary">Login</button>
                                 
 

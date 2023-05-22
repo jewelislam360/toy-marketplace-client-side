@@ -11,7 +11,7 @@ import RegularCar from '../TabCat/RegularCar';
 const CategoryTabs = () => {
     
     
-    const [tabIndex, setTabIndex] = useState();
+    const [tabIndex, setTabIndex] = useState(1);
 
     
 
@@ -21,7 +21,7 @@ const CategoryTabs = () => {
     return (
         <div>
         <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
-      <TabList>
+      <TabList className="text-center py-6 font-bold">
         <Tab>Sports car</Tab>
         <Tab>Truck</Tab>
         <Tab>Regular car</Tab>
