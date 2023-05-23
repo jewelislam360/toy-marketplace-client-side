@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const SportsCar = () => {
     const [fires, setFires] = useState();
         useEffect(() => {
-            fetch('https://b7a11-toy-marketplace-server-side-jewelislam360.vercel.app/categoryToys/sports car')
+            fetch('/categoryToys/sports car')
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);

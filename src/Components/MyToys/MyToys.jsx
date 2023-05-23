@@ -12,7 +12,7 @@ const MyToys = () => {
 
 
     useEffect(() => {
-        fetch(`https://b7a11-toy-marketplace-server-side-jewelislam360.vercel.app/myToys/${user?.email}`)
+        fetch(`/myToys/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -33,7 +33,7 @@ const MyToys = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`https://b7a11-toy-marketplace-server-side-jewelislam360.vercel.app/myToys/${_id}`, {
+                fetch(`/myToys/${_id}`, {
 
                     method: "DELETE"
                 })

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const FireTruck = () => {
     const [trucks, setFiretrucks] = useState();
         useEffect(() => {
-            fetch('https://b7a11-toy-marketplace-server-side-jewelislam360.vercel.app/categoryToys/mini fire truck')
+            fetch('/categoryToys/mini fire truck')
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);

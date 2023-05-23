@@ -20,7 +20,7 @@ const UpdeteToys = () => {
         const data ={ quantity, price, description}
         console.log(data);
 
-        fetch(`http://localhost:5000/allToys/${_id}`,{
+        fetch(`https://b7a11-toy-marketplace-server-side-jewelislam360.vercel.app/allToys/${_id}`,{
             method: "PUT",
             headers: {
                 "content-type": "application/json"
