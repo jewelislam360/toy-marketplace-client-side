@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const PoliceCar = () => {
     const [polices, setPolices] = useState();
         useEffect(() => {
-            fetch('/categoryToys/mini police car')
+            fetch('https://b7a11-toy-marketplace-server-side-jewelislam360.vercel.app/categoryToys/mini police car')
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);

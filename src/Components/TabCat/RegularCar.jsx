@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const RegularCar = () => {
     const [regulars, setRegulars] = useState();
         useEffect(() => {
-            fetch('/categoryToys/regular car')
+            fetch('https://b7a11-toy-marketplace-server-side-jewelislam360.vercel.app/categoryToys/regular car')
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
