@@ -67,7 +67,7 @@ const MyToys = () => {
         <div>
             <div className='py-20'>
 
-<h1 className="text-secondary text-center font-bold text-4xl mb-5" >Our Gallery</h1>
+<h1 className="text-secondary text-center font-bold text-4xl mb-5" >My Toys</h1>
 <p className='text-secondary w-[50%] mx-auto'>At Toy Cars, we are passionate about toy cars and all things miniature! Our website is dedicated to providing a delightful experience for toy car enthusiasts of all ages.</p>
 <div class="inline-flex items-center justify-center w-full">
     <hr class="w-[50%] h-1 my-8 bg-secondary border-0 rounded dark:bg-gray-700" />

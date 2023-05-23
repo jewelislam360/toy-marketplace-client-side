@@ -33,18 +33,18 @@ const NavBar = () => {
     {
         user ? 
         <>
-            <li><Link to='/'>Home</Link></li>
-        <li><Link to='/alltoys'>All Toys</Link></li>
-        <li><Link to='/mytoys'>My Toys</Link></li>
-        <li><Link to='/addatoy'>Add a toy</Link></li>
-        <li><Link to='/blog' >Blogs</Link></li>
+            <li><Link className='font-bold' to='/'>Home</Link></li>
+        <li><Link className='font-bold' to='/alltoys'>All Toys</Link></li>
+        <li><Link className='font-bold' to='/mytoys'>My Toys</Link></li>
+        <li><Link className='font-bold' to='/addatoy'>Add a toy</Link></li>
+        <li><Link className='font-bold' to='/blog' >Blogs</Link></li>
         </>
         :
 
         <>
-             <li><Link to='/'>Home</Link></li>
-        <li><Link to='/alltoys'>All Toys</Link></li>
-        <li><Link to='/blog' >Blogs</Link></li>
+             <li><Link className='font-bold' to='/'>Home</Link></li>
+        <li><Link className='font-bold' to='/alltoys'>All Toys</Link></li>
+        <li><Link className='font-bold' to='/blog' >Blogs</Link></li>
         </>
     }
         

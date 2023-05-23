@@ -11,7 +11,7 @@ import RegularCar from '../TabCat/RegularCar';
 const CategoryTabs = () => {
     
     
-    const [tabIndex, setTabIndex] = useState(1);
+    const [tabIndex, setTabIndex] = useState(0);
 
     
 

@@ -53,9 +53,10 @@ const AddAToy = () => {
     }
     return (
         <div>
-            <div className='my-10'>
+            <div className='py-10'>
 
-                <h1 className="text-secondary text-center font-bold text-4xl" >Added a Toy</h1>
+                <h1 className="text-secondary text-center font-bold text-4xl mb-5" >Added a Toy</h1>
+                <p className='text-secondary w-[50%] mx-auto'>At Toy Cars, we are passionate about toy cars and all things miniature! Our website is dedicated to providing a delightful experience for toy car enthusiasts of all ages.</p>
                 <div class="inline-flex items-center justify-center w-full">
                     <hr class="w-[50%] h-1 my-8 bg-secondary border-0 rounded dark:bg-gray-700" />
                     <div class="absolute px-4 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-900">
